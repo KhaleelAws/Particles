@@ -1,3 +1,5 @@
+//made by Venkata G. Ande and Aws Khaleel
+
 #include "Particle.h"
 
 Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosition)
