@@ -80,7 +80,7 @@ void Engine::update(float dtAsSeconds)
 void Engine::draw()
 {
     // Clear everything from the last frame
-    m_Window.clear(Color::Black);
+    m_Window.clear();
 
     // Draw particles
     for (int i = 0; i < m_particles.size(); i++)
