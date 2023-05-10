@@ -67,7 +67,7 @@ void Engine::update(float dtAsSeconds)
         if (it->getTTL() > 0.0) // check if particle's TTL is still valid
         {
             it->update(dtAsSeconds); // call update on that particle
-            ++it; // increment the iterator
+            it++; // increment the iterator
         }
         else
         {
