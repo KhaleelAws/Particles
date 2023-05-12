@@ -85,7 +85,7 @@ void Engine::draw()
     m_Window.clear(Color::Black);
 
     // Draw particles
-    for (int i = 0; i < m_particles.size(); i++)
+    for (long unsigned int i = 0; i < m_particles.size(); i++)
     {
         m_Window.draw(m_particles[i]);
     }

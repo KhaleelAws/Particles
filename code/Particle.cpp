@@ -13,6 +13,10 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
     m_cartesianPlane.setSize(target.getSize().x, (-1.0) * target.getSize().y); // Set the size of the Cartesian plane
     m_centerCoordinate = target.mapPixelToCoords(mouseClickPosition, m_cartesianPlane); // Map the mouse click position to Cartesian coordinates
     m_vx = (rand() % 401 + 100); // The particle's x velocity
+    if(rand() % 2 != 0)
+    {
+        m_vx *= -1;
+    }
     m_vy = (rand() % 401 + 100); // The particle's y velocity
     m_color1 = Color::White; // The first color used to draw the particle
     m_color2 = Color(rand() % 256, rand() % 256, rand() % 256); // The second color used to draw the particle
