@@ -120,6 +120,7 @@ namespace Matrices
         return os;
     }
 
+    //use the linear algebra formula for rotation
     RotationMatrix::RotationMatrix(double theta) : Matrix(2,2) {
         double cosTheta = cos(theta);
         double sinTheta = sin(theta);
@@ -130,11 +131,14 @@ namespace Matrices
         (*this)(1,1) = cosTheta;
     }
 
+    //use the linear algebra formula for scaling: 
+	//expand or shrink by a factor 
     ScalingMatrix::ScalingMatrix(double scale) : Matrix(2,2) {
         (*this)(0,0) = scale;
         (*this)(1,1) = scale;
     }
 
+    //shift each column value by a certain amount to translate
     TranslationMatrix::TranslationMatrix(double xShift, double yShift, int nCols) : Matrix(2, nCols){
         for (int j = 0; j < nCols; j++)
         {
