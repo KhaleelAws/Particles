@@ -69,7 +69,7 @@ void Engine::update(float dtAsSeconds)
         if (it->getTTL() > 0.0) // check if particle's TTL is still valid
         {
             it->update(dtAsSeconds); // call update on that particle
-            ++it; // increment the iterator
+            it++; // increment the iterator
         }
         else
         {
@@ -82,7 +82,7 @@ void Engine::update(float dtAsSeconds)
 void Engine::draw()
 {
     // Clear everything from the last frame
-    m_Window.clear(Color::Black);
+    m_Window.clear();
 
     // Draw particles
     for (long unsigned int i = 0; i < m_particles.size(); i++)
