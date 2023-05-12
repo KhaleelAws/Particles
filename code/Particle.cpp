@@ -13,7 +13,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
     m_cartesianPlane.setSize(target.getSize().x, (-1.0) * target.getSize().y); // Set the size of the Cartesian plane
     m_centerCoordinate = target.mapPixelToCoords(mouseClickPosition, m_cartesianPlane); // Map the mouse click position to Cartesian coordinates
     m_vx = (rand() % 401 + 100); // The particle's x velocity
-    if(rand() % 2 != 0)
+    if(rand() % 2 != 0) //make the x velocity randomly pop out left or right
     {
         m_vx *= -1;
     }
